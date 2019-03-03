@@ -152,6 +152,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-堆中的路径-数据结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: 7-5 ���е�·�� ��25 �֣�<br>��һϵ�и������ֲ���һ����ʼΪ�յ�С����H[]����������������±�i����ӡ��H[i]��������·����<br>�����ʽ:</p>
+<p>ÿ����Ե�1�а���2��������N��M(��1000)���ֱ��ǲ���Ԫ�صĸ������Լ���Ҫ��ӡ��·��������<br>��һ�и�������[-10000, 10000]�ڵ�N��Ҫ������һ����ʼΪ�յ�С���ѵ����������һ�и���M���±ꡣ<br>�����ʽ:</p>
+<p>�������и�����ÿ���±�i����һ���������H[i]��������·���ϵ����ݡ����ּ���1���ո�ָ�����ĩ�����ж���ո�<br>��������:</p>
+<p>5 3<br>46 23 26 24 10<br>5 4 3<br>�������:</p>
+<p>24 23 10<br>46 23 10<br>26 10<br>����: ��Խ<br>��λ: �㽭��ѧ<br>ʱ������: 400 ms<br>�ڴ�����: 64 MB<br>���볤������: 16 KB</p>
+<p>˼��:��ĿҪ��С����,������ʵ��С����,����Ҫ����һ���ڱ���֤ѭ���Ľ���,������С����,�����ڱ�ȡ����СֵС��-10001</p>
+<p>����С����,�����ڵ�Ϊn,����������Ϊ2n ��2n+1.���Զ���int����, n/2�������ĸ��ڵ�.������뵽��һ�����ͼ���</p>
+<p>���Զ��ڲ��뺯��insert(x)��ʵ�־���,������ֵx&lt;����λ�õĸ��ڵ�ʱ,��ǰλ�õ�ֵ�����丸�ڵ��ֵ,���ڴ������ڱ�ֵ,<br>���Ե������±�Ϊ1��ֵ��Զ���ڱ�Ҫ��,�Ӷ�����ѭ��.</p>
+<p>����ʵ��</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>//ȫ�ֱ���<br>int MaxSize,n;<br>int arr[1001],size;</p>
+<p>void insert( int x );<br>void output( int x);</p>
+<p>int main() {<br>    int i,x;<br>    size = 0;<br>    arr[0] = -10001;//�ڱ�</p>
+<pre><code>scanf_s(&quot;%d &quot;, &amp;MaxSize);//�����ֵ
+scanf_s(&quot;%d &quot;, &amp;n);//�Ƚϵ�ֵ�ĸ���
+
+
+
+//ѭ������ֵ
+for (i = 1; i &lt;= MaxSize; i++) {
+    scanf_s(&quot;%d&quot;, &amp;x);
+    insert( x );
+}
+//��ȡֵ ���·��
+for (i = 1; i &lt;= n; i++) {
+    scanf_s(&quot;%d&quot;, &amp;x);
+    output( x);
+}
+
+return 0;
+</code></pre><p>}</p>
+<p>void insert( int x) { //i������ǰ��ֵ�ĸ���-1<br>    //1 �����Сֻ��MaxSize�� 2 ���x�ȸ�С ȡ����,�ݹ����ɸ�<br>    //3 ����ȸ���,�ݹ��������ٵݹ�������<br>    size++;<br>    int i;<br>    for (i = size; x &lt; arr[i / 2]; i /= 2) {<br>        arr[i] = arr[i / 2];<br>    }<br>    arr[i] = x;</p>
+<p>}</p>
+<p>void output( int x) {//x�������±�<br>    int i;<br>    for (i = x; i &gt;= 1; i /= 2) {<br>        printf(“%d”, arr[i]);<br>        if (i &gt; 1)printf(“ “);<br>    }<br>    printf(“\n”);<br>}</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/pancodex.github.io/2019/03/03/堆中的路径-数据结构/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

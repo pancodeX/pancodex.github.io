@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第一篇博客文章 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="说一说我搭载这个hexo+github博客时出现的问题以及解决的方法. #第一个问题: hexo d 之后没反应   这是在配置完_config.yml后执行的hexo d,发现无反应,发现时配置文件的时候冒号后面没有加空格.  #第二:输入hexo.d命令时出现Error: spawn git ENOENT发现是git命令无法使用于是下载git 部署git环境  #第三:部署完后再次输入hexo">
+  <meta name="description" content="title: 7-5 ���е�·�� ��25 �֣���һϵ�и������ֲ���һ����ʼΪ�յ�С����H[]����������������±�i����ӡ��H[i]��������·���������ʽ: ÿ����Ե�1�а���2��������N��M(��1000)���ֱ��ǲ���Ԫ�صĸ������Լ���Ҫ��ӡ��·����������һ�и�������[">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客文章">
-<meta property="og:url" content="http://yoursite.com/2019/02/27/第一篇博客文章/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/03/03/堆中的路径-数据结构/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="说一说我搭载这个hexo+github博客时出现的问题以及解决的方法. #第一个问题: hexo d 之后没反应   这是在配置完_config.yml后执行的hexo d,发现无反应,发现时配置文件的时候冒号后面没有加空格.  #第二:输入hexo.d命令时出现Error: spawn git ENOENT发现是git命令无法使用于是下载git 部署git环境  #第三:部署完后再次输入hexo">
+<meta property="og:description" content="title: 7-5 ���е�·�� ��25 �֣���һϵ�и������ֲ���һ����ʼΪ�յ�С����H[]����������������±�i����ӡ��H[i]��������·���������ʽ: ÿ����Ե�1�а���2��������N��M(��1000)���ֱ��ǲ���Ԫ�صĸ������Լ���Ҫ��ӡ��·����������һ�и�������[">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-28T11:35:24.684Z">
+<meta property="og:updated_time" content="2019-03-03T11:28:44.870Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一篇博客文章">
-<meta name="twitter:description" content="说一说我搭载这个hexo+github博客时出现的问题以及解决的方法. #第一个问题: hexo d 之后没反应   这是在配置完_config.yml后执行的hexo d,发现无反应,发现时配置文件的时候冒号后面没有加空格.  #第二:输入hexo.d命令时出现Error: spawn git ENOENT发现是git命令无法使用于是下载git 部署git环境  #第三:部署完后再次输入hexo">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="title: 7-5 ���е�·�� ��25 �֣���һϵ�и������ֲ���һ����ʼΪ�յ�С����H[]����������������±�i����ӡ��H[i]��������·���������ʽ: ÿ����Ե�1�а���2��������N��M(��1000)���ֱ��ǲ���Ԫ�صĸ������Լ���Ҫ��ӡ��·����������һ�и�������[">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,39 +154,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-第一篇博客文章" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-堆中的路径-数据结构" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      第一篇博客文章
-    </h1>
-  
-
-        
-        <a href="/pancodex.github.io/2019/02/27/第一篇博客文章/" class="archive-article-date">
-  	<time datetime="2019-02-27T11:23:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-27</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>说一说我搭载这个hexo+github博客时出现的问题以及解决的方法.</p>
-<p>#第一个问题: hexo d 之后没反应</p>
-<p>  这是在配置完_config.yml后执行的hexo d,发现无反应,发现时配置文件的时候冒号后面没有加空格.</p>
-<hr>
-<p>#第二:输入hexo.d命令时出现Error: spawn git ENOENT<br>发现是git命令无法使用<br>于是下载git 部署git环境</p>
-<hr>
-<p>#第三:部署完后再次输入hexo.d命令,出现Spawn failed 错误<br>git命令已经可用,错误提示fatal: not a git repository (or any of the parent directories): .git<br>解决方法:在目录下创建一个git 文件. 命令:”git init”.</p>
-<p>##然后hexo d 成功进入下一步</p>
-<hr>
-<p>#但是又出现了一直循环显示The file will have its original line endings in your working directory.<br>百度后发现是 &lt;路径中存在 / 的符号转义问题&gt;false就是不转换符号默认是true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题<br>解决方法：<br>git config –global core.autocrlf false</p>
-<hr>
-<p>#再次!!发现!! 显示错误 Filename too long<br>原因是文件的路径太深,解决方法:git config –system core.longpaths true</p>
-<p>最后完结.</p>
+        <hr>
+<p>title: 7-5 ���е�·�� ��25 �֣�<br>��һϵ�и������ֲ���һ����ʼΪ�յ�С����H[]����������������±�i����ӡ��H[i]��������·����<br>�����ʽ:</p>
+<p>ÿ����Ե�1�а���2��������N��M(��1000)���ֱ��ǲ���Ԫ�صĸ������Լ���Ҫ��ӡ��·��������<br>��һ�и�������[-10000, 10000]�ڵ�N��Ҫ������һ����ʼΪ�յ�С���ѵ����������һ�и���M���±ꡣ<br>�����ʽ:</p>
+<p>�������и�����ÿ���±�i����һ���������H[i]��������·���ϵ����ݡ����ּ���1���ո�ָ�����ĩ�����ж���ո�<br>��������:</p>
+<p>5 3<br>46 23 26 24 10<br>5 4 3<br>�������:</p>
+<p>24 23 10<br>46 23 10<br>26 10<br>����: ��Խ<br>��λ: �㽭��ѧ<br>ʱ������: 400 ms<br>�ڴ�����: 64 MB<br>���볤������: 16 KB</p>
+<p>˼��:��ĿҪ��С����,������ʵ��С����,����Ҫ����һ���ڱ���֤ѭ���Ľ���,������С����,�����ڱ�ȡ����СֵС��-10001</p>
+<p>����С����,�����ڵ�Ϊn,����������Ϊ2n ��2n+1.���Զ���int����, n/2�������ĸ��ڵ�.������뵽��һ�����ͼ���</p>
+<p>���Զ��ڲ��뺯��insert(x)��ʵ�־���,������ֵx&lt;����λ�õĸ��ڵ�ʱ,��ǰλ�õ�ֵ�����丸�ڵ��ֵ,���ڴ������ڱ�ֵ,<br>���Ե������±�Ϊ1��ֵ��Զ���ڱ�Ҫ��,�Ӷ�����ѭ��.</p>
+<p>����ʵ��</p>
+<p>#include &lt;stdio.h&gt;</p>
+<p>#include &lt;string.h&gt;</p>
+<p>//ȫ�ֱ���<br>int MaxSize,n;<br>int arr[1001],size;</p>
+<p>void insert( int x );<br>void output( int x);</p>
+<p>int main() {<br>    int i,x;<br>    size = 0;<br>    arr[0] = -10001;//�ڱ�</p>
+<pre><code>scanf_s(&quot;%d &quot;, &amp;MaxSize);//�����ֵ
+scanf_s(&quot;%d &quot;, &amp;n);//�Ƚϵ�ֵ�ĸ���
+
+
+
+//ѭ������ֵ
+for (i = 1; i &lt;= MaxSize; i++) {
+    scanf_s(&quot;%d&quot;, &amp;x);
+    insert( x );
+}
+//��ȡֵ ���·��
+for (i = 1; i &lt;= n; i++) {
+    scanf_s(&quot;%d&quot;, &amp;x);
+    output( x);
+}
+
+return 0;
+</code></pre><p>}</p>
+<p>void insert( int x) { //i������ǰ��ֵ�ĸ���-1<br>    //1 �����Сֻ��MaxSize�� 2 ���x�ȸ�С ȡ����,�ݹ����ɸ�<br>    //3 ����ȸ���,�ݹ��������ٵݹ�������<br>    size++;<br>    int i;<br>    for (i = size; x &lt; arr[i / 2]; i /= 2) {<br>        arr[i] = arr[i / 2];<br>    }<br>    arr[i] = x;</p>
+<p>}</p>
+<p>void output( int x) {//x�������±�<br>    int i;<br>    for (i = x; i &gt;= 1; i /= 2) {<br>        printf(“%d”, arr[i]);<br>        if (i &gt; 1)printf(“ “);<br>    }<br>    printf(“\n”);<br>}</p>
 
       
 
@@ -266,7 +274,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/27/第一篇博客文章/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/03/堆中的路径-数据结构/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,18 +288,9 @@
   
 <nav id="article-nav">
   
-    <a href="/pancodex.github.io/2019/03/03/堆中的路径-数据结构/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/pancodex.github.io/2019/02/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/pancodex.github.io/2019/02/27/第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一篇博客文章</div>
       <i class="icon-circle-right"></i>
     </a>
   

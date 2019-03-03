@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title: 7-5 堆中的路径 （25 分）将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。输入格式: 每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。输出格式: 对输入中给出的每个下">
+  <meta name="description" content="title: 7-5 堆中的路径 （25 分）将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。输入格式: 每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。输出格式: 对输入中给出的每个下标">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2019/03/03/堆中的路径-数据结构/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title: 7-5 堆中的路径 （25 分）将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。输入格式: 每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。输出格式: 对输入中给出的每个下">
+<meta property="og:description" content="title: 7-5 堆中的路径 （25 分）将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。输入格式: 每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。输出格式: 对输入中给出的每个下标">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-03T11:31:10.785Z">
+<meta property="og:updated_time" content="2019-03-03T12:06:03.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="title: 7-5 堆中的路径 （25 分）将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。输入格式: 每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。输出格式: 对输入中给出的每个下">
+<meta name="twitter:description" content="title: 7-5 堆中的路径 （25 分）将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。输入格式: 每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。输出格式: 对输入中给出的每个下标">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -159,13 +159,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: 7-5 堆中的路径 （25 分）<br>将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。<br>输入格式:</p>
+        <h1 id="title-7-5-堆中的路径-（25-分）"><a href="#title-7-5-堆中的路径-（25-分）" class="headerlink" title="title: 7-5 堆中的路径 （25 分）"></a>title: 7-5 堆中的路径 （25 分）</h1><p>将一系列给定数字插入一个初始为空的小顶堆H[]。随后对任意给定的下标i，打印从H[i]到根结点的路径。<br>输入格式:</p>
 <p>每组测试第1行包含2个正整数N和M(≤1000)，分别是插入元素的个数、以及需要打印的路径条数。<br>下一行给出区间[-10000, 10000]内的N个要被插入一个初始为空的小顶堆的整数。最后一行给出M个下标。<br>输出格式:</p>
 <p>对输入中给出的每个下标i，在一行中输出从H[i]到根结点的路径上的数据。数字间以1个空格分隔，行末不得有多余空格。<br>输入样例:</p>
 <p>5 3<br>46 23 26 24 10<br>5 4 3<br>输出样例:</p>
 <p>24 23 10<br>46 23 10<br>26 10<br>作者: 陈越<br>单位: 浙江大学<br>时间限制: 400 ms<br>内存限制: 64 MB<br>代码长度限制: 16 KB</p>
-<p>思考:题目要求小顶堆,用数组实现小顶堆,但是要建立一个哨兵保证循环的结束,由于是小顶堆,所以哨兵取比最小值小的-10001</p>
+<p><strong> 思考:题目要求小顶堆,用数组实现小顶堆,但是要建立一个哨兵保证循环的结束</strong>,由于是小顶堆,所以哨兵取比最小值小的-10001</p>
 <p>对于小顶堆,当根节点为n,则左右子树为2n 和2n+1.所以对于int类型, n/2就是他的父节点.如果能想到这一点后面就简单了</p>
 <p>所以对于插入函数insert(x)的实现就是,当传入值x&lt;插入位置的父节点时,当前位置的值等于其父节点的值,由于存在了哨兵值,<br>所以当数组下标为1的值永远比哨兵要大,从而结束循环.</p>
 <p>代码实现</p>

@@ -157,18 +157,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="˵һ˵�Ҵ���hexo-github����ʱ���ֵ������Լ�����k���"><a href="#˵һ˵�Ҵ���hexo-github����ʱ���ֵ������Լ�����k���" class="headerlink" title="˵һ˵�Ҵ���hexo+github����ʱ���ֵ������Լ�����ķ���."></a>˵һ˵�Ҵ���hexo+github����ʱ���ֵ������Լ�����ķ���.</h4><h2 id="��һ������-hexo-d-֮��u��Ӧ"><a href="#��һ������-hexo-d-֮��u��Ӧ" class="headerlink" title="��һ������: hexo d ֮��û��Ӧ"></a>��һ������: hexo d ֮��û��Ӧ</h2><p>  ������������_config.yml��ִ�е�hexo d,�����޷�Ӧ,����ʱ�����ļ���ʱ��ð�ź���û�мӿո�.</p>
+        <h4 id="说一说我搭建这个hexo-github博客时出现的问题以及解决的方法"><a href="#说一说我搭建这个hexo-github博客时出现的问题以及解决的方法" class="headerlink" title="说一说我搭建这个hexo+github博客时出现的问题以及解决的方法."></a>说一说我搭建这个hexo+github博客时出现的问题以及解决的方法.</h4><h2 id="第一个问题-hexo-d-之后没反应"><a href="#第一个问题-hexo-d-之后没反应" class="headerlink" title="第一个问题: hexo d 之后没反应"></a>第一个问题: hexo d 之后没反应</h2><p>  这是在配置完_config.yml后执行的hexo d,发现无反应,发现时配置文件的时候冒号后面没有加空格.</p>
 <hr>
-<h2 id="�ڶ�-����hexo-d����ʱ����Error-spawn-git-ENOENT"><a href="#�ڶ�-����hexo-d����ʱ����Error-spawn-git-ENOENT" class="headerlink" title="�ڶ�:����hexo.d����ʱ����Error: spawn git ENOENT"></a>�ڶ�:����hexo.d����ʱ����Error: spawn git ENOENT</h2><p>������git�����޷�ʹ��<br>��������git ����git����</p>
+<h2 id="第二-输入hexo-d命令时出现Error-spawn-git-ENOENT"><a href="#第二-输入hexo-d命令时出现Error-spawn-git-ENOENT" class="headerlink" title="第二:输入hexo.d命令时出现Error: spawn git ENOENT"></a>第二:输入hexo.d命令时出现Error: spawn git ENOENT</h2><p>发现是git命令无法使用<br>于是下载git 部署git环境</p>
 <hr>
-<h2 id="����-��������ٴ�����hexo-d����-����Spawn-failed-����"><a href="#����-��������ٴ�����hexo-d����-����Spawn-failed-����" class="headerlink" title="����:��������ٴ�����hexo.d����,����Spawn failed ����"></a>����:��������ٴ�����hexo.d����,����Spawn failed ����</h2><p>git�����Ѿ�����,������ʾfatal: not a git repository (or any of the parent directories): .git<br>�������:��Ŀ¼�´���һ��git �ļ�. ����:”git init”.</p>
-<h3 id="C��hexo-d-�ɹ�������һ��"><a href="#C��hexo-d-�ɹ�������һ��" class="headerlink" title="Ȼ��hexo d �ɹ�������һ��"></a>Ȼ��hexo d �ɹ�������һ��</h3><hr>
-<h2 id="�����ֳ�����һֱѭ����ʾThe-file-will-have-its-original-line-endings-in-your-working-directory"><a href="#�����ֳ�����һֱѭ����ʾThe-file-will-have-its-original-line-endings-in-your-working-directory" class="headerlink" title="�����ֳ�����һֱѭ����ʾThe file will have its original line endings in your working directory."></a>�����ֳ�����һֱѭ����ʾThe file will have its original line endings in your working directory.</h2><p>�ٶȺ����� &lt;·���д��� / �ķ���ת������&gt;false���ǲ�ת������Ĭ����true���൱�ڰ�·���� / ���Ž���ת�壬�������ӵ�ʱ���������<br>���������<br>git config –global core.autocrlf false</p>
+<h2 id="第三-部署完后再次输入hexo-d命令-出现Spawn-failed-错误"><a href="#第三-部署完后再次输入hexo-d命令-出现Spawn-failed-错误" class="headerlink" title="第三:部署完后再次输入hexo.d命令,出现Spawn failed 错误"></a>第三:部署完后再次输入hexo.d命令,出现Spawn failed 错误</h2><p>git命令已经可用,错误提示fatal: not a git repository (or any of the parent directories): .git<br>解决方法:在目录下创建一个git 文件. 命令:”git init”.</p>
+<h3 id="然后hexo-d-成功进入下一步"><a href="#然后hexo-d-成功进入下一步" class="headerlink" title="然后hexo d 成功进入下一步"></a>然后hexo d 成功进入下一步</h3><hr>
+<h2 id="但是又出现了一直循环显示The-file-will-have-its-original-line-endings-in-your-working-directory"><a href="#但是又出现了一直循环显示The-file-will-have-its-original-line-endings-in-your-working-directory" class="headerlink" title="但是又出现了一直循环显示The file will have its original line endings in your working directory."></a>但是又出现了一直循环显示The file will have its original line endings in your working directory.</h2><p>百度后发现是 &lt;路径中存在 / 的符号转义问题&gt;false就是不转换符号默认是true，相当于把路径的 / 符号进行转义，这样添加的时候就有问题<br>解决方法：<br>git config –global core.autocrlf false</p>
 <hr>
-<h2 id="�ٴ�-����-��ʾ����-Filename-too-long"><a href="#�ٴ�-����-��ʾ����-Filename-too-long" class="headerlink" title="�ٴ�!!����!! ��ʾ���� Filename too long"></a>�ٴ�!!����!! ��ʾ���� Filename too long</h2><p>ԭ�����ļ���·��̫��,����,ֻҪ:git config –system core.longpaths true</p>
-<p>������.</p>
-<p>�ܽ�һ��,��ʵ�ڴ��ع����и��ű��˵Ľ̳̻��ǳ����˺ܶ�Ĵ���,����git��������Ҫ����git����,Ȼ���޸ļ������·��,���������ն�������(Ҳ����cmd)��ʹ��,�Լ����ֺܶ����ҳ404�ȵȵȵ�,��ʵ�Ҷ��������ͷ������,���ǰٶȰٶ����������������������.���Ǵ�����githubpages����д���ͻ���ͦ���ӵ�,�������ҵ����ڻ�ûȥ�Ż�,�Ҿ���CSDN��github��������Ҫ����̫����.</p>
-<p>�����Լ��Ļ�û���ƺõĲ�����ҳ��:<a href="https://pancodex.github.io/" target="_blank" rel="noopener">https://pancodex.github.io/</a></p>
+<h2 id="再次-发现-显示错误-Filename-too-long"><a href="#再次-发现-显示错误-Filename-too-long" class="headerlink" title="再次!!发现!! 显示错误 Filename too long"></a>再次!!发现!! 显示错误 Filename too long</h2><p>原因是文件的路径太深,简单啦,只要:git config –system core.longpaths true</p>
+<p>最后完结.</p>
+<p>总结一下,其实在搭载过程中跟着别人的教程还是出现了很多的错误,比如git操作必须要下载git软件,然后修改计算机的路径,让它能在终端命令行(也就是cmd)中使用,以及出现很多次网页404等等等等,其实我都差点想重头再来了,但是百度百度摸索摸索最后还是做出来了.但是创建的githubpages用来写博客还是挺复杂的,以至于我到现在还没去优化,我觉得CSDN比github博客真是要方便太多了.</p>
+<p>最后挂自己的还没完善好的博客主页把:<a href="https://pancodex.github.io/" target="_blank" rel="noopener">https://pancodex.github.io/</a></p>
 
       
 
